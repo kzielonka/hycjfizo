@@ -1,0 +1,114 @@
+\documentclass[svgnames]{report}
+\usepackage[utf8]{inputenc} 
+\usepackage{polski}       
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{bbm}            % sudo apt-get install texlive-fonts-recommended texlive-fonts-extra
+\usepackage{amsthm}
+\usepackage{algorithmic}	% sudo apt-get install texlive-science
+\usepackage{listings}             % Include the listings-package
+\usepackage{framed}
+\usepackage{enumerate}
+
+\makeatletter
+ \renewcommand\@seccntformat[1]{\csname  the#1\endcsname.\quad}
+ 
+ 
+\begin{document}
+\tableofcontents
+
+\chapter{Egzamin 2008}
+\section{Część 2}
+\subsection{Zadanie 4}
+\begin{framed}
+Czy istnieje algorytm rostrzygający dla danych dwóch deterministycznych automatów ze stosem, czy istnieje niepuste słowo, które zostanie zaakceptowane przez oba te automaty?
+
+Przez deterministyczny automat ze stosem rozumiemy tu automat, którego każdy krok polega na wczytaniu jedneo symbulu ze słowa wejściowego, jednego symbolu ze stosu i w zależności od wczytanych danych oraz od aktualnego stanu, na zmianie stanu i odłożeni na stos ciągu ( być może pustego) symboli (w szczególności taki automat nie wykonue $\varepsilon$-przejść). Automat akceptuje słowo, jeśli po wczytaniu tego słowa stos jest pusty (tzn. zaiwera jedynie symbol dna stosu).
+\end{framed}
+
+Taki algorytm nieistnieje.
+W celu pokazania tego, stworzymy redukcję, przedstawioną poniżej, problemu PCP (nierostrzygalnego) do naszego problemu z automatami.
+\begin{equation}
+f(\left<(l_1, r_1), \cdots, (l_k, r_k)\right>) = (A_1, A_2) \ \hbox{gdzie $A_1$ i $A_2$ to automat opisane w zadaniu}
+\end{equation}
+
+Automaty $A_1$ i $A_2$ zbudujemy tak by akceptoway języki opisane poniżej:
+\begin{equation}
+L(A_1) = L(\left\{ i_{j_1} \cdots i_{j_s} l^R_{j_s} \cdots l^R_{j_1}\right\})
+\end{equation}
+\begin{equation}
+L(A_2) = L(\left\{ i_{j_1} \cdots i_{j_s} r^R_{j_s} \cdots r^R_{j_1}\right\})
+\end{equation}
+
+Idea automaty $A_1$:
+Automat wczytuje tylke słowa postaci ciąg indeksów, po którym występuje ciąg literek, w przeciwnym przypadku zatrzymuje sie z niepustym stosem.
+\begin{enumerate}
+	\item automat wczytuje kolejne indeksy $i_j$ i wrzuca na stos słowa $l_{i_j}^R$
+	\item gdy zobaczy literke to ściąga ją ze stosu jeżeli taka sama leży na wierzchu lub się zacina
+\end{enumerate}
+
+%Niech $\left<i_1, \cdtos, i_k\right>$ będzie zbiorem indeksów od 1 do k.
+
+\subsection{zadanie 5}
+\begin{framed}
+Niech $A \subset N$ (nie jest r.e.) będzie zbiorem tych liczb naturalnych, ktore są numerami programów zatrzymujących się dla wszystkich danych. Niech $E \subset N$ (nie jest r.e.) bedzie zbiorem tych liczb naturalnych, które sa numerami programów nie zatrzymujujących się dla żadnych danych. Udowodnij, że $E \leqslant_{rek} A$.
+
+Wskazówka: To jest łatwe zadanie. Przypomnij sobie co to jest redukjca. Pomyśl jakiego typu muszą byc argumenty redukcji, która masz zbudować i jakiego typu maja być wartości. Nie gap sie w pustą kartkę, napisz sobie równoważność, ktora ma zachodzić.
+\end{framed}
+
+
+\begin{equation}
+A = \left\{i : \forall_x \varphi_i(x) \not= \perp \right\}
+\end{equation}
+
+\begin{equation}
+E = \left\{j : \forall_x \varphi_j(x) = \perp \right\}
+\end{equation}
+
+Mamy pokazać że:
+\begin{equation}
+E \leqslant_{rek} A \ \Leftrightarrow (\exists_f \forall_{x \in N} x \in E \Leftrightarrow f(x) \in A)
+\end{equation}
+
+Pokażemy że istnieje takie $f$.
+W tym celu stworzymy odpowiednią redukcję, której kod przedstiony jest poniżej:
+
+Niech $b:N \rightarrow N \times N$ będzie bijekcją (np taką przekątniową $b(1) = (1,1)$, $b(2) = (1,2)$, $b(3) = (2,1)$, ...).
+
+\begin{lstlisting}
+wczytaj n
+t = numer takiego programu:
+	wczytaj m
+	x, k = b(m)
+	uruchom fi_n(x) na k krokow
+		jesli fi_n(x) zatrzyma sie i zwroci wynik to zapetl sie
+		w.p.p. zwroc 1
+zwroc t
+\end{lstlisting}
+
+\begin{description}
+	\item[$n \in E$] 
+		\begin{equation*}
+			n \in E \ \rightarrow \ \forall_x \varphi_n(x) = \perp \ \rightarrow \ \forall_x \varphi_t(x) = 1 \not= \perp \ \rightarrow t = f(n) \in A
+		\end{equation*}
+	\item[$n \not\in E$]
+		\begin{equation*}
+			n \not\in E \ \rightarrow \ \exists_x \varphi_n(x) \not= \perp \ \rightarrow \ \exists_m b(m)=(x,k) \wedge \varphi_n(x) \hbox{ uruchomione na k kroków} \not= \perp \ \rightarrow \exists_m \varphi_t(m) = \perp \ \rightarrow n \not\in A
+		\end{equation*}
+		
+\end{description}
+\subsection{zadanie 6}
+\begin{framed}
+Niech A i E będą takie, jak w poprzednim zadaniu. Czy zachodzi nierówność $A \leqslant_{rek} E$?
+
+Wskazówka: Co pamiętasz z ćwiczeń na temat nierówności  $K \leqslant_{rek} \overline{K}$?
+\end{framed}
+
+\begin{thebibliography}{99}
+\bibitem{Test} test reference
+\end{thebibliography}
+\end{document}
+
+
+

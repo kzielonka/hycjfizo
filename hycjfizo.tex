@@ -105,6 +105,61 @@ Niech A i E będą takie, jak w poprzednim zadaniu. Czy zachodzi nierówność $
 Wskazówka: Co pamiętasz z ćwiczeń na temat nierówności  $K \leqslant_{rek} \overline{K}$?
 \end{framed}
 
+Korzystając ze wskazówki wiemy że $K \not\leqslant_{rek} \overline{K}$.
+Pokażemy, że:
+\begin{equation}
+K \leqslant_{rek} A \ \wedge \ E \leqslant_{rek} \overline{K} \ \Rightarrow \ A \not \leqslant_{rek} E 
+\end{equation}
+
+Najpierw pokażemy, że:
+\begin{equation}
+K \leqslant_{rek} A \Leftrightarrow \exists_f \forall_{x} x \in K \Leftrightarrow f(x) \in A
+\end{equation}
+W tym celu skonstrujemy następująca redukcje f:
+\begin{lstlisting}
+wczytaj n 
+t <- znajdz numer nastepujacego programu:
+	wczytaj m
+	zwroc fi_n(n)
+zwroc t
+\end{lstlisting}
+\begin{description}
+	\item[$n \in K$] 
+		\begin{equation*}
+			n \in K \Rightarrow \forall_x \varphi_t(x) = \varphi_n(n) \not= \perp \Rightarrow n \in A
+		\end{equation*}
+	\item[$n \not\in K$]
+		\begin{equation*}
+			n \not\in K \Rightarrow \forall_x \varphi_t(x) = \varphi_n(n) = \perp \Rightarrow n \not\in A
+		\end{equation*}
+\end{description}
+
+Teraz pokażemy, że:
+\begin{equation}
+E \leqslant_{rek} \overline{K} \Leftrightarrow \exists_f \forall_{x} x \in K \Leftrightarrow f(x) \in \overline{K}
+\end{equation}
+W tym celu skonstrujuemy następującą redukcje f:
+\begin{lstlisting}
+wczytaj n
+t <- znajdz numer nastepujacego programu:
+	wczytaj m
+	dla kazdego i od 1 do ....
+		dla kazdego j od 1 do ...
+			jezeli fi_n(i) zwroci wyniki po j krokach zwroc 1
+	zwroc 1	
+zwroc t
+\end{lstlisting}
+\begin{description}
+	\item[$n \in E$]
+		\begin{equation*}
+			n \in E \Rightarrow \forall_x \varphi_n(x) = \perp \Rightarrow \neq \exists_{i,j} \varphi_n(i) \hbox{ zatrzyma sie po j krokach } \Rightarrow \forall \varphi_t(x) = \perp \Rightarrow \varphi_t(t) = \perp \Rightarrow t = f(n) \in \overline{K}
+		\end{equation*}
+	\item[$n \not\in E$]
+		\begin{equation*}
+			n \not\in E \Rightarrow \exists_{i,j} \varphi_n(i) \hbox{ zatrzyma sie po j krokach } \Rightarrow \forall_x \varphi_t(x) = 1 \Rightarrow \varphi_t(t) = 1 \Rightarrow t = f(n) \not\in \overline{K}
+		\end{equation*}
+\end{description}
+
 \begin{thebibliography}{99}
 \bibitem{Test} test reference
 \end{thebibliography}

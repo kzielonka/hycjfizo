@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.6)  4 JUN 2011 20:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.6)  13 JUN 2011 21:30
 entering extended mode
  %&-line parsing enabled.
 **hycjfizo.tex
@@ -533,13 +533,38 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Rozdzia\PlPrIeC {\l } 1.
 [2
 
+] [3]
+Rozdzia\PlPrIeC {\l } 2.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 97.
+(/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 97.
+ [4
+
 ]
-Overfull \hbox (1.41809pt too wide) in paragraph at lines 85--86
+<images/egz2007pt2.jpg, id=29, 1027.84pt x 803.0pt>
+File: images/egz2007pt2.jpg Graphic file (type jpg)
+
+<use images/egz2007pt2.jpg>
+Overfull \hbox (2.2051pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+[5 <./images/egz2007pt2.jpg>]
+\c@Tw=\count119
+ [6]
+Rozdzia\PlPrIeC {\l } 3.
+[7
+
+]
+Overfull \hbox (1.41809pt too wide) in paragraph at lines 225--226
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (69.48787pt too wide) detected at line 98
+Overfull \hbox (69.48787pt too wide) detected at line 238
 \OML/plm/m/it/10 n \OMS/plsy/m/n/10 62 \OML/plm/m/it/10 E  \OMS/plsy/m/n/10 !  
 9[]\OML/plm/m/it/10 '[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 x\OT4/cmr/m/n/10 ) \OM
 S/plsy/m/n/10 6\OT4/cmr/m/n/10 =\OMS/plsy/m/n/10 ? !  9[]\OML/plm/m/it/10 b\OT4
@@ -551,20 +576,13 @@ it/10 x\OT4/cmr/m/n/10 )[] \OMS/plsy/m/n/10 6\OT4/cmr/m/n/10 =\OMS/plsy/m/n/10
 A
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 121.
-
-(/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 121.
- [3]
-Overfull \hbox (13.41821pt too wide) in paragraph at lines 148--149
+[8]
+Overfull \hbox (13.41821pt too wide) in paragraph at lines 288--289
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.75806pt too wide) detected at line 156
+Overfull \hbox (60.75806pt too wide) detected at line 296
 \OML/plm/m/it/10 n \OMS/plsy/m/n/10 2 \OML/plm/m/it/10 E \OMS/plsy/m/n/10 ) 8[]
 \OML/plm/m/it/10 '[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 x\OT4/cmr/m/n/10 ) =\OMS/
 plsy/m/n/10 ?)6\OT4/cmr/m/n/10 = \OMS/plsy/m/n/10 9[]\OML/plm/m/it/10 '[]\OT4/c
@@ -575,34 +593,36 @@ mr/m/n/10 (\OML/plm/m/it/10 i\OT4/cmr/m/n/10 )[] \OMS/plsy/m/n/10 ) 8\OML/plm/m
 /cmr/m/n/10 (\OML/plm/m/it/10 n\OT4/cmr/m/n/10 ) \OMS/plsy/m/n/10 2 []
  []
 
-[4] [5
+[9] [10
 
 ] (./hycjfizo.aux) ) 
 Here is how much of TeX's memory you used:
- 4156 strings out of 495026
- 51261 string characters out of 1181803
+ 4171 strings out of 495026
+ 51435 string characters out of 1181803
  114172 words of memory out of 3000000
- 7266 multiletter control sequences out of 15000+50000
- 13062 words of font info for 39 fonts, out of 3000000 for 9000
+ 7277 multiletter control sequences out of 15000+50000
+ 13598 words of font info for 40 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
  27i,6n,32p,515b,1532s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/pl/plms.enc}{/usr
-/share/texmf-texlive/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texmf-texlive/font
-s/enc/dvips/pl/plsc.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plme.enc}{
-/usr/share/texmf-texlive/fonts/enc/dvips/pl/plrm.enc}</usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/pl/plbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plbx12.pfb></us
-r/share/texmf-texlive/fonts/type1/public/pl/plex10.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/pl/plmi5.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plmi7.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/pl/plr5.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/pl
-r7.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy10.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/pl/plsy7.pfb>
-Output written on hycjfizo.pdf (5 pages, 91822 bytes).
+/share/texmf-texlive/fonts/enc/dvips/pl/plsc.enc}{/usr/share/texmf-texlive/font
+s/enc/dvips/pl/plme.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plmi.enc}{
+/usr/share/texmf-texlive/fonts/enc/dvips/pl/plit.enc}{/usr/share/texmf-texlive/
+fonts/enc/dvips/pl/plrm.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/
+msam10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plbx10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/pl/plex10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/p
+lmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plmi5.pfb></usr/share
+/texmf-texlive/fonts/type1/public/pl/plmi7.pfb></usr/share/texmf-texlive/fonts/
+type1/public/pl/plr10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plr5.
+pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-
+texlive/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-texlive/fonts/type1/
+public/pl/plsy5.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy7.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/pl/plti10.pfb>
+Output written on hycjfizo.pdf (10 pages, 203972 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

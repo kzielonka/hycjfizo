@@ -116,6 +116,47 @@ Program rzeczywiście rozpoznaje przynależność do $\overline{K}$:
 Tutaj mamy sprzeczność gdyż wiemy że $\overline{K}$ nie jest r.e. 
 
 
+\subsection{zadanie 5}
+\begin{framed}
+...
+\end{framed}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm]{images/egz2007pt2.jpg}
+\caption{bla}
+\end{figure}
+
+\begin{enumerate}
+	\item Wszystkie pola poza wyszczególnionymi poniżej są białe.
+	\item W wierszu 1 zakodowane jest słowo w za pomoca odwrotności bijekcji $f_{\Sigma}$, zakończone białymi polami.
+		\begin{equation}
+			f_{\Sigma} : K_{\Sigma} \rightarrow \Sigma
+		\end{equation}
+		Niech $n = |w|$.
+
+	\item Pola w  powyższych wierszach będą kodwać numery słów, z których zbudowane jest słowo w za pomocą bijekcji:
+		\begin{equation}
+			f_{I} : K_I \rightarrow \left\{1, \cdots, r\right\}
+		\end{equation}
+		Dla każdego wiersza (n pól od lewej krawędzi)  $i > 1$ wszystkie pola są białe oprucz dokładnie jednego, którego kolor $k$ należy do  $K_I$. Niech $a_i=f_I(k)$ dla wiersza $2 \cdot i$. Niech $b_i=f_I(k)$ dla wiersza $2 \cdot i + 1$.
+	\item Korzystając z powyższych oznaczeń $\forall_i a_i = b_i$.
+	\item Jeżeli kolor z $a_i$ znajduje się na pozycji j od lewej to $w_j \cdots w_{j+|l_{a_i}|} = l_{a_i}$.
+	\item Jeżeli kolor z $a_i$ znajduje się na pozycji j od lewej to kolor z $a_{i+1}$ znajduje się na pozycji $j+|l_{a_i}|+1$.
+	\item Jeżeli w wierszu $i > 1$ kolor znajdue się na pozycji $j$ od lewej 
+	
+\end{enumerate}
+
+Automat będzie działał w następujących fazach:
+\begin{enumerate}
+	\item hello
+\end{enumerate}
+
+\newtheorem{Tw}{Twierdzenie}
+\begin{proof}
+
+\end{proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Egzamin 2008}
 \section{Część 2}

@@ -259,6 +259,78 @@ zwroc t
 		\end{equation*}
 \end{description}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Egzamin 2011}
+\section{Zadanie 5}
+\begin{framed}
+\begin{equation*}
+A_0 = \left\{ \phi_n : Dom(\phi_n) = \emptyset \right\}
+\end{equation*}
+\begin{equation*}
+A_1 = \left\{ \phi_n : |Dom(\phi_n)| = 1 \right\}
+\end{equation*}
+
+Czy $A_0 \leqslant_{REK} A_1$ ?
+\end{framed}
+
+\begin{equation*}
+A_0 \leqslant_{REK} A_1 \ \Leftrightarrow \ \exists_f \forall_n n \in A_0 \Leftrightarrow f(n) \in A_1
+\end{equation*}
+
+REDUKCJA f:
+\begin{lstlisting}
+wczytaj n
+t <- znajdz numer programu:
+	wczytaj m
+	if m == 1 then zwroc 1
+	else zwroc phi_n(m-1)
+return t
+\end{lstlisting}
+	
+
+\section{Zadanie 5}
+\begin{framed}
+	Czy $A_1 \leqslant A_0$?
+\end{framed}
+
+Pokażemy, że:
+\begin{equation}
+	K \leqslant A_1 \ \wedge \ A_0 \overline{K} \ \Rightarrow \ A_1 \not\leqslant A_0
+\end{equation}
+
+1) Pokażemy, że: 
+\begin{equation*}
+K \leqslant A_1 \ \Leftrightarrow \ (\exists_{f_1} \forall_n n \in K \Leftrightarrow f(n) \in A_1)
+\end{equation*}
+
+REDUKCA $f_1$:
+\begin{lstlisting}
+wczytaj n
+t <- znajdz numer programu:
+	wczytaj m
+	if m == 1 then
+		uruchom $phi_n(n)$
+	else zapetl sie
+return t
+\end{lstlisting}
+
+2) Pokażemy, że:
+\begin{equation*}
+A_0 \leqslant \overline{K} \ \Leftrightarrow \ (\exists_{f_2} \forall_n n \in A_0 \Leftrightarrow f(n) \in \overline{K} )
+\end{equation*}
+
+REDUKCJA $f_2$:
+\begin{lstlisting}
+wczytaj n
+t <- znajdz numer programu:
+	wczytaj m
+	for i=1 to +inf
+		for j=1 to i
+			uruchom phi_n(m) na i krokow 
+			jezeli phi_n(m) zatrzyma sie i zwroci wynik to zwroc 1
+return t	
+\end{lstlisting}
+
 \begin{thebibliography}{99}
 \bibitem{Test} test reference
 \end{thebibliography}

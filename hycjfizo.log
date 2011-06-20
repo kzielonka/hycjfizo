@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.6)  13 JUN 2011 21:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.6)  14 JUN 2011 14:43
 entering extended mode
  %&-line parsing enabled.
 **hycjfizo.tex
@@ -544,27 +544,16 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
  [4
 
 ]
-<images/egz2007pt2.jpg, id=29, 1027.84pt x 803.0pt>
-File: images/egz2007pt2.jpg Graphic file (type jpg)
-
-<use images/egz2007pt2.jpg>
-Overfull \hbox (2.2051pt too wide) in paragraph at lines 126--127
- [][] 
- []
-
-[5 <./images/egz2007pt2.jpg>]
-\c@Tw=\count119
- [6]
 Rozdzia\PlPrIeC {\l } 3.
-[7
+[5
 
 ]
-Overfull \hbox (1.41809pt too wide) in paragraph at lines 225--226
+Overfull \hbox (1.41809pt too wide) in paragraph at lines 184--185
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (69.48787pt too wide) detected at line 238
+Overfull \hbox (69.48787pt too wide) detected at line 197
 \OML/plm/m/it/10 n \OMS/plsy/m/n/10 62 \OML/plm/m/it/10 E  \OMS/plsy/m/n/10 !  
 9[]\OML/plm/m/it/10 '[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 x\OT4/cmr/m/n/10 ) \OM
 S/plsy/m/n/10 6\OT4/cmr/m/n/10 =\OMS/plsy/m/n/10 ? !  9[]\OML/plm/m/it/10 b\OT4
@@ -576,13 +565,13 @@ it/10 x\OT4/cmr/m/n/10 )[] \OMS/plsy/m/n/10 6\OT4/cmr/m/n/10 =\OMS/plsy/m/n/10
 A
  []
 
-[8]
-Overfull \hbox (13.41821pt too wide) in paragraph at lines 288--289
+[6]
+Overfull \hbox (13.41821pt too wide) in paragraph at lines 247--248
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.75806pt too wide) detected at line 296
+Overfull \hbox (60.75806pt too wide) detected at line 255
 \OML/plm/m/it/10 n \OMS/plsy/m/n/10 2 \OML/plm/m/it/10 E \OMS/plsy/m/n/10 ) 8[]
 \OML/plm/m/it/10 '[]\OT4/cmr/m/n/10 (\OML/plm/m/it/10 x\OT4/cmr/m/n/10 ) =\OMS/
 plsy/m/n/10 ?)6\OT4/cmr/m/n/10 = \OMS/plsy/m/n/10 9[]\OML/plm/m/it/10 '[]\OT4/c
@@ -593,14 +582,23 @@ mr/m/n/10 (\OML/plm/m/it/10 i\OT4/cmr/m/n/10 )[] \OMS/plsy/m/n/10 ) 8\OML/plm/m
 /cmr/m/n/10 (\OML/plm/m/it/10 n\OT4/cmr/m/n/10 ) \OMS/plsy/m/n/10 2 []
  []
 
+[7]
+Rozdzia\PlPrIeC {\l } 4.
+[8
+
+]
+Overfull \hbox (43.41852pt too wide) in paragraph at lines 330--331
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
 [9] [10
 
 ] (./hycjfizo.aux) ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 495026
- 51435 string characters out of 1181803
+ 4158 strings out of 495026
+ 51282 string characters out of 1181803
  114172 words of memory out of 3000000
- 7277 multiletter control sequences out of 15000+50000
+ 7267 multiletter control sequences out of 15000+50000
  13598 words of font info for 40 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
  27i,6n,32p,515b,1532s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -620,9 +618,9 @@ pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-
 texlive/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-texlive/fonts/type1/
 public/pl/plsy5.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy7.pfb><
 /usr/share/texmf-texlive/fonts/type1/public/pl/plti10.pfb>
-Output written on hycjfizo.pdf (10 pages, 203972 bytes).
+Output written on hycjfizo.pdf (10 pages, 123763 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

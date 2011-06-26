@@ -115,7 +115,6 @@ Program rzeczywiście rozpoznaje przynależność do $\overline{K}$:
 \end{description}
 Tutaj mamy sprzeczność gdyż wiemy że $\overline{K}$ nie jest r.e. 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Egzamin 2008}
 \section{Część 2}
@@ -259,9 +258,116 @@ zwroc t
 		\end{equation*}
 \end{description}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Egzamin 2009 Poprawka}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\section{Część 3}
+\subsection{zadanie 7}
+\begin{framed}
+Jaka jest zlożoność problemu 3-kolorowania grafów, jeśli ograniczymy się do grafów o stopniu wierzchołków równym co najwyżej 4?
+
+Wskazówka: Zadania 8 i 9 są być może łatwiejsze.
+\end{framed}
+
+\subsection{zadanie 8}
+\begin{framed}
+W kolejnych zadanich rozważamy akademik, w którym studenci budzą się o godzinie 9 rano, a k kwadransów później wychodza na egzamin. Przed wyjściem każdy z nich musi (w dowolnej kolejności) wykonać k czynności (być może innych dla każdego studenta), z których każda trwa kwadrans i musi byc wykonywana nieprzerwanie. Problem polega na tym, że niektóre czynności sie wykluczają: na przykąłd prasowanie białej bluzeczki wymaga zajęcia całego stołu, więc nie można prasowac jeśli ktos akurat je śniadnie, albo pisze ściągę. Relacja wykluczania nie musi jednak byc przechodnia: można przeciez pisac ściągę, kiedy ktoś je śnaidanie.
+
+Instacją Problemu Zdążenia w k Kwadransów ($PZK_k$) będzie lista studnetów, wraz z czynnościami które moja wykonać, oraz lista par czynności które sie wykluczają. $PZK_k$ będzie zbiorem tych instacji, dla których istnieje harmonogram wykonywania czynności przy których studenci zdążą na egzamin i który nie zakąłda wykonywania jednocześnie wykluczających się czynności.
+
+Jaka jest złożoność problemu $PZK_2$?
+\end{framed}
+
+Problem ten jest w P.
+Pokażemy to przez redukcję problemu $PZK_2$ do $2SAT$, który jest w P:
+\begin{equation*}
+PZK_2 \leqslant 2SAT
+\end{equation*}
+(nieskończone)
+Reducja $f:PZK_2 \rightarrow 2SAT$:
+\begin{enumerate}
+	\item Dla każdej czynności a tworzymy nową zmienną $x_a$.
+	\item Jeżeli czynności a i b nie mogą być wykonywane jednocześnie to tworzymy nowe klauzule: $(x_a \vee \neg x_b) \wedge (\neg x_a \vee x_b)$.
+	\item Dla każdego studenta, który ma wykonać czynności a i b, tworzymy klauzle (jak powyżej): $(x_a \vee \neg x_b) \wedge (\neg x_a \vee x_b)$.
+\end{enumerate}
+
+\subsection{zadanie 9}
+\begin{framed}
+Jaka jest złożoność problu $PZK_3$?
+\end{framed}
+
+Problem ten jest NP-zupełny.
+Pokażemy to konstruując redukcję z NP-zupełnego proglemu 3COL do $PZK_3$:
+\begin{equation*}
+3COL \leqslant_P PZK_3 \ \Leftrightarrow \ \left( \exists_{\hbox{wielomianowa redukcja f}} \forall_x x \in 3COL \Leftrightarrow f(x) \in PZK_3 \right)
+\end{equation*} 
+
+Redukcja $f:3COL \rightarrow PZK_3$:
+\begin{enumerate}
+	\item
+		Redukcja jako argument przyjmuje graf $G=<V,E>$, a zwraca trójkę $<A, \left\{S_i\right\}, E'>$ gdzie:
+		\begin{description} 
+			\item[A] -- zbiór czynności,
+			\item[$S_i$] --  to czynności do wykonania przez i'tego studenta,
+			\item[E'] -- zbiór par czynności, ktore nie moga być wykonywane jednocześnie.
+		\end{description}
+	\item
+		Za zbiór czynności A, redukcja przyjmuje wierzchołki grafu oraz dodatkowy element 'x' nie występujący w V.
+		\begin{equation*}
+			A = V \cup \{x\}
+		\end{equation*}
+	\item
+		Tworzymy $n = |V|$ studentów. Niech $g:V \rightarrow \{1,\cdots ,n\}$ będzie bijekcją odwzorowującą zbiór V w liczby $1,\cdots ,n$.
+		Każdemu wierzchołkowi $v \in V$, przyporządkowujemy studenta $S_{g(v)}$ ze zbiorem czynności $\left\{v, x, x\right\}$.
+		\begin{equation*}
+			\forall_v S_{g(v)} = \left\{ v, x, x \right\}
+		\end{equation*}
+	\item
+		Za zbiór par czynności, które nie moga być wykonywane jednocześnie E' przyjmujemy zbiór krawędźi E.
+	\item
+		Podsumowując:
+		\begin{equation*}
+			f(G) = f(<V,E>) = <V \cup \{x\}, <S_1, \cdots S_n>, E> \ \ \wedge x \not\in V \wedge S_i = \left\{g^{-1}(i), x, x\right\}
+		\end{equation*}
+\end{enumerate}
+
+\begin{proof}
+	Redukcja jest wielomianowa gdyż stworzenie zbioru A, $S_i$ oraz E' jest O(n).
+	Kolory używane w kolorowaniu grafu oznaczmy jako: $\{1_c, 2_c, 3_c\}$.
+	Poniżej pokażemy że jeżeli graf G należy do 3COL to f(G) należy do $PZK_3$ i wdrugą stornę.
+	\begin{description}
+		\item[$\Rightarrow$]
+			\begin{enumerate}
+				\item $f(G) = f(<V, E>) = <A, \left\{S_i\right\}, E'>$
+				\item Z założenia wiemy, że istnieje trój pokolorowanie grafu G.
+				\item Za kolor studenta i, będziemy rozumieli kolor wierzchołka znajdującego się w zbiorze $S_i$ (z konstruckji f wiemy, że w zbiorze $S_i$ może znajdować się tylko jeden wierzchołek). 
+				\item Podzielmy studentów na trzy grupy X, Y i Z, w taki sposób aby w każdej z grup znajdowali się studenci tego samego koloru i każdy student należał do jednej z grup.
+				\item Niech studenci z grupy X wykonują czynności inną niż 'x' jako pierwszą z koleji, studenci z Y jako drugą, a studneci z Z jako trzecią.
+				\item Zaóważmy że w każdym z kwadransów wykonywane są tylko czynności tego samego koloru i czynność 'x', która może być jednocześnie wykonywana z każda inną czynnością.
+				\item Ponieważ $E = E'$ więc czynności tego samego koloru mogą być wykonywane jednocześnie.
+				\item Jak pokazaliśmy powyżej: $<A \left\{S_i\right\}, E'> \in PZK_3$.
+			\end{enumerate}
+		\item[$Leftarrow$]
+			\begin{enumerate}
+				\item Z założenia wiemy, że $f(G) \in PZK_3$.
+				\item Analogicznie jak powyżej niech X, Y, Z, bedą zbiorami studentów takimi, że:
+					\begin{description}
+						\item[X] -- studenci, którzy wykonują czynność inną niż 'x' jako pierwsza,
+						\item[Y] -- studenci, którzy wykonują czynność inną niż 'x' jako drugą,
+						\item[Z] -- studenci, którzy wykonują czynność inną niż 'x' jako trzecią.
+					\end{description}
+				\item Wierzchołki wykonywane przez studentów z X jako czynność pokolorujmy na kolor $1_c$, z Y na kolor $2_c$,  a z Z na kolor $3_c$.
+				\item Zaóważmy że wtedy każdy wierzchołek ma przypisany jeden z trzech kolorów i żaden jego sąsiad w grafie nie ma takiego samego koloru.				
+			\end{enumerate}
+	\end{description}
+\end{proof}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Egzamin 2011}
-\section{Zadanie 5}
+\section{Część 2}
+\subsection{Zadanie 5}
 \begin{framed}
 \begin{equation*}
 A_0 = \left\{ \phi_n : Dom(\phi_n) = \emptyset \right\}
@@ -288,7 +394,7 @@ return t
 \end{lstlisting}
 	
 
-\section{Zadanie 5}
+\subsection{Zadanie 6}
 \begin{framed}
 	Czy $A_1 \leqslant A_0$?
 \end{framed}
